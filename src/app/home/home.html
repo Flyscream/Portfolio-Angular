@@ -1,18 +1,36 @@
-<div class="min-h-screen bg-[#f8faff] flex flex-col items-center justify-between py-20">
+<div class="min-h-screen bg-[#f8faff] flex flex-col items-center justify-start py-20">
 
-  <h1 class="text-5xl md:text-6xl font-extrabold text-[#5c5ce0] tracking-tight">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-[#5c5ce0] tracking-tight mb-10">
     Portfolio Alexandre Gleizes
   </h1>
 
-  <div class="flex-grow"></div>
-
   <nav class="flex flex-wrap justify-center gap-10 text-[#5c5ce0] text-xl font-semibold">
-    <a href="#" class="hover:underline decoration-2 underline-offset-8">Accueil</a>
-    <a href="#" class="hover:underline decoration-2 underline-offset-8">Compétences</a>
-    <a href="#" class="hover:underline decoration-2 underline-offset-8">Projets</a>
-    <a href="#" class="hover:underline decoration-2 underline-offset-8">Stage</a>
-    <a href="#" class="hover:underline decoration-2 underline-offset-8">Contact</a>
+    <a routerLink="/home" class="hover:underline decoration-2 underline-offset-8">Accueil</a>
+    <a routerLink="/competences" class="hover:underline decoration-2 underline-offset-8">Compétences</a>
+    <a routerLink="/projets" class="hover:underline decoration-2 underline-offset-8">Projets</a>
+    <a routerLink="/stage" class="hover:underline decoration-2 underline-offset-8">Stage</a>
+    <a routerLink="/contact" class="hover:underline decoration-2 underline-offset-8">Contact</a>
   </nav>
+
+  <div class="mt-20 w-full max-w-4xl px-4 space-y-8">
+    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+      <h2 class="text-3xl font-bold text-[#5c5ce0] mb-4">Compétences</h2>
+      <p class="text-slate-600 mb-4">Voici quelques-unes de mes compétences clés :</p>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-slate-700">
+        <li class="flex items-center">
+          <span class="w-2 h-2 bg-[#5c5ce0] rounded-full mr-2"></span>
+          Développement web (Angular, Tailwind)
+        </li>
+        <li class="flex items-center">
+          <span class="w-2 h-2 bg-[#5c5ce0] rounded-full mr-2"></span>
+          Gestion de bases de données
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </div>
 
+<footer class="w-full bg-[#5c5ce0] text-white text-center py-6 mt-10">
+  &copy; 2026 Alexandre Gleizes. Tous droits réservés.
+</footer>
