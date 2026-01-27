@@ -38,10 +38,15 @@ ng serve
 L'application est accessible à l'adresse suivante : http://localhost:4200/.
 
 
+---
+
 ### Gestion des branches et déploiement
 Ce projet utilise une architecture à deux branches pour séparer le développement de la mise en production :
 
+
 #### Branche main : Branche de développement contenant l'intégralité du code source (Typescript, HTML, CSS). Toute modification doit être poussée sur cette branche.
+
+
 
 #### Branche gh-pages : Branche de production générée automatiquement. Elle contient uniquement les artefacts de compilation (fichiers statiques) destinés à être servis par GitHub Pages.
 
@@ -55,11 +60,13 @@ ng build --base-href /Portfolio-Angular/
 ```
 Déploiement Utilise l'utilitaire angular-cli-ghpages pour transférer le contenu du build vers la branche de destination.
 
+
+
+
 ```Bash
 npx angular-cli-ghpages --dir=dist/projet-portfolio/browser
 ```
 Architecture du Portfolio
 
 
-Le site est structuré en plusieurs sections clés :
 
