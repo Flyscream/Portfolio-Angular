@@ -1,12 +1,7 @@
 <div class="min-h-screen bg-[#f8faff] flex flex-col">
 
-  <nav class="flex flex-wrap justify-center gap-6 md:gap-10 text-[#5c5ce0] text-lg md:text-xl font-semibold py-12 px-4">
-    <a routerLink="/home" class="hover:underline decoration-2 underline-offset-8">Accueil</a>
-    <a routerLink="/competences" class="hover:underline decoration-2 underline-offset-8">Compétences</a>
-  </nav>
 
   <main class="flex-grow flex flex-col items-center justify-start px-4">
-    
     <h1 class="text-5xl md:text-6xl font-extrabold text-[#5c5ce0] tracking-tight mb-16 text-center">
       Portfolio Alexandre Gleizes
     </h1>
@@ -27,33 +22,21 @@
         <h2 class="text-4xl font-bold text-[#5c5ce0] mb-10">Documents à télécharger</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <div class="flex flex-col items-center group">
-            <div class="w-full aspect-square bg-slate-50 rounded-2xl mb-4 flex items-center justify-center border border-slate-100 shadow-sm overflow-hidden p-4 group-hover:shadow-md transition-shadow">
-              <!--<img src="" alt="Veille Techno" class="max-h-full object-contain">-->
-            </div>
-            <a href="#" class="text-[#5c5ce0] font-semibold text-lg hover:underline decoration-2 underline-offset-4">
-              Veille techno Alexandre.zip
-            </a>
-          </div>
+  
+          <app-document-card 
+            title="Veille techno Alexandre.zip" 
+            imageSrc="assets/image_veille.png">
+          </app-document-card>
 
-          <div class="flex flex-col items-center group">
-            <div class="w-full aspect-square bg-slate-50 rounded-2xl mb-4 flex items-center justify-center border border-slate-100 shadow-sm overflow-hidden p-4 group-hover:shadow-md transition-shadow">
-              <!--<img src="assets/image_e4.png" alt="Tableau E4" class="max-h-full object-contain">-->
-            </div>
-            <a href="#" class="text-[#5c5ce0] font-semibold text-lg hover:underline decoration-2 underline-offset-4 text-center">
-              Tableau Epreuve E4.csv
-            </a>
-          </div>
+          <app-document-card 
+            title="Tableau Epreuve E4.csv" 
+            imageSrc="assets/image_e4.png">
+          </app-document-card>
 
-          <div class="flex flex-col items-center group">
-            <div class="w-full aspect-square bg-slate-50 rounded-2xl mb-4 flex items-center justify-center border border-slate-100 shadow-sm overflow-hidden p-4 group-hover:shadow-md transition-shadow">
-              <!--<img src="assets/image_cv.png" alt="CV" class="max-h-full object-contain">-->
-            </div>
-            <a href="#" class="text-[#5c5ce0] font-semibold text-lg hover:underline decoration-2 underline-offset-4">
-              CV Alexandre GLEIZES
-            </a>
-          </div>
+          <app-document-card 
+            title="CV Alexandre GLEIZES" 
+            imageSrc="assets/image_cv.png">
+          </app-document-card>
 
         </div>
       </div>
@@ -64,7 +47,7 @@
 
   <footer class="w-full bg-[#5c5ce0] text-white text-center py-8 rounded-t-[3rem] mt-10">
     <p class="text-lg font-medium tracking-wide">
-      &copy; 2026 Alexandre Gleizes. Tous droits réservés.
+      &copy; 2026 Alexandre Gleizes. 
     </p>
   </footer>
 
