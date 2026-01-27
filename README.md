@@ -1,59 +1,65 @@
-# ProjetPortfolio
+# Portfolio - Alexandre Gleizes (BTS SIO)
+### Ce dépôt contient le code source de mon portfolio professionnel, développé dans le cadre de ma deuxième année de BTS SIO (Services Informatiques aux Organisations).
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+Lien de déploiement : https://flyscream.github.io/Portfolio-Angular/
 
-## Development server
+## Présentation du projet
+Cette application web a été conçue pour centraliser mon parcours académique, mes compétences techniques ainsi que les projets réalisés lors de mon cursus en BUT Informatique et en BTS SIO. L'objectif est de fournir un support numérique clair pour les épreuves de certification et les recherches de stage ou d'emploi.
 
-To start a local development server, run:
+Technologies exploitées
+Framework : Angular 18+
 
-```bash
+---
+
+
+Framework CSS : Tailwind CSS
+
+Hébergement : GitHub Pages
+
+### Installation et environnement de développement
+Pour cloner et exécuter ce projet localement, suivez les étapes suivantes :
+
+Clonage du dépôt
+
+```Bash
+git clone https://github.com/Flyscream/Portfolio-Angular.git
+```
+### Installation des dépendances
+
+```Bash
+npm install
+```
+### Lancement du serveur de développement
+
+```Bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+L'application est accessible à l'adresse suivante : http://localhost:4200/.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Gestion des branches et déploiement
+Ce projet utilise une architecture à deux branches pour séparer le développement de la mise en production :
 
-```bash
-ng generate component component-name
+#### Branche main : Branche de développement contenant l'intégralité du code source (Typescript, HTML, CSS). Toute modification doit être poussée sur cette branche.
+
+#### Branche gh-pages : Branche de production générée automatiquement. Elle contient uniquement les artefacts de compilation (fichiers statiques) destinés à être servis par GitHub Pages.
+
+Procédure de mise à jour du site
+Pour déployer les dernières modifications effectuées sur la branche main, les commandes suivantes sont exécutées :
+
+Compilation du projet (Build) Génère les fichiers statiques dans le répertoire dist/ en configurant la racine des liens pour GitHub Pages.
+
+```Bash
+ng build --base-href /Portfolio-Angular/
 ```
+Déploiement Utilise l'utilitaire angular-cli-ghpages pour transférer le contenu du build vers la branche de destination.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+```Bash
+npx angular-cli-ghpages --dir=dist/projet-portfolio/browser
 ```
+Architecture du Portfolio
 
-## Building
 
-To build the project run:
+Le site est structuré en plusieurs sections clés :
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
