@@ -11,20 +11,20 @@ import { RouterLink } from '@angular/router';
 })
 export class Competences {
   competencesList = [
-    { title: 'Python', desc: 'IA Pacman, gestion de données, gestion de serveur.', level: 80 },
-    { title: 'HTML', desc: 'Sites internet pour des projets scolaires.', level: 75 },
-    { title: 'CSS', desc: 'Stylisation de pages, animations de pages.', level: 66 },
-    { title: 'JavaScript', desc: 'Gestion des clients, Bot Discord.js, jeux vidéo.', level: 40 },
-    { title: 'Java', desc: "Implémentation front-end et back-end d'un logiciel.", level: 75 },
-    { title: 'SQL', desc: 'Gestion et communication avec les bases de données.', level: 35 },
-    { title: 'C++', desc: 'Utilisation de C++ pour des projets scolaires.', level: 30 },
-    { title: 'VBA', desc: 'Stage de 1ère année BTS SIO.', level: 40 },
-    { title: 'PHP', desc: 'Utilisation du PHP dans mon cursus scolaire.', level: 60 },
-    { title: 'WordPress', desc: "Création d'un site vitrine.", level: 50 },
-    { title: 'Arduino', desc: 'Feux de circulation, gestion matériel et logiciel.', level: 25 },
-    { title: 'Angular', desc: 'Applications web dynamiques (Stage 2ème année).', level: 25 },
-    { title: 'VS Code', desc: 'Outil principal de développement.', level: 25 },
-    { title: 'IntelliJ IDEA', desc: 'Projets académiques et stages.', level: 25 },
-    { title: 'GitHub', desc: 'Centralisation des projets.', level: 25 }
+    { title: 'Python', desc: 'IA Pacman, gestion de données, gestion de serveur.', level: 80, image: 'photo/imagespython.jpg' },
+    { title: 'HTML', desc: 'Sites internet pour des projets scolaires.', level: 75, image: 'photo/imageHTML.png' },
+    { title: 'CSS', desc: 'Stylisation de pages, animations de pages.', level: 66, image: 'photo/CSS.png' },
+    { title: 'JavaScript', desc: 'Gestion des clients, Bot Discord.js, jeux vidéo.', level: 40, image: 'photo/javascript.png' },
+    { title: 'Java', desc: "Implémentation front-end et back-end d'un logiciel.", level: 75, image: 'photo/java.png' },
+    { title: 'SQL', desc: 'Gestion et communication avec les bases de données.', level: 35, image: 'photo/sql.png' },
+    { title: 'C++', desc: 'Utilisation de C++ pour des projets scolaires.', level: 30, image: 'photo/c++.png' },
+    { title: 'VBA', desc: 'Stage de 1ère année BTS SIO.', level: 40, image: 'photo/vba.png' },
+    { title: 'PHP', desc: 'Utilisation du PHP dans mon cursus scolaire.', level: 60, image: 'photo/php.png' },
+    { title: 'WordPress', desc: "Création d'un site vitrine.", level: 50, image: 'photo/wordpress.png' },
+    { title: 'Arduino', desc: 'Feux de circulation, gestion matériel et logiciel.', level: 25, image: 'photo/arduino.png' },
+    { title: 'Angular', desc: 'Applications web dynamiques (Stage 2ème année).', level: 25, image: 'photo/Angular_logo.png' },
+    { title: 'VS Code', desc: 'Outil principal de développement.', level: 25, image: 'photo/vscode.png' },
+    { title: 'IntelliJ IDEA', desc: 'Projets académiques et stages.', level: 25, image: 'photo/IntelliJ_IDEA_Product_Icon.png' },
+    { title: 'GitHub', desc: 'Centralisation des projets.', level: 25, image: 'photo/github.png' }
   ];
 }

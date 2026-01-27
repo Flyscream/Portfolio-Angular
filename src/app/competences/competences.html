@@ -9,6 +9,12 @@
     <div *ngFor="let item of competencesList" 
          class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
       
+      <div class="w-24 h-24 mb-6 flex items-center justify-center">
+          <img [src]="item.image" 
+              [alt]="item.title" 
+              class="max-w-full max-h-full object-contain">
+      </div>
+
       <h2 class="text-3xl font-bold text-slate-900 mb-4">{{ item.title }}</h2>
 
       <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
@@ -21,7 +27,5 @@
         </div>
       </div>
 
-    </div>
-
-  </div>
+    </div> </div>
 </div>

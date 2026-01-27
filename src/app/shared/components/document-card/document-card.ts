@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class DocumentCardComponent {
   @Input() title: string = '';    
-  @Input() imageSrc: string = ''; 
+  @Input() imageSrc: string = '';
+  @Input() fileUrl: string = '';
 }
