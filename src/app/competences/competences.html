@@ -1,201 +1,27 @@
-<div class="min-h-screen bg-[#f8faff] flex flex-col">
+<div class="flex flex-col items-center justify-start py-12 px-4">
+  
+  <h1 class="text-5xl md:text-6xl font-extrabold text-[#5c5ce0] tracking-tight mb-16 text-center">
+    Compétences
+  </h1>
 
-  <main class="flex-grow flex flex-col items-center justify-start px-4">
+  <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
     
-        <h1 class="text-5xl md:text-6xl font-extrabold text-[#5c5ce0] tracking-tight mb-16 text-center">
-        Compétences
-        </h1>
+    <div *ngFor="let item of competencesList" 
+         class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
+      
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">{{ item.title }}</h2>
 
-        <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
+      <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
+        {{ item.desc }}
+      </p>
 
-        <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Python</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                IA Pacman, gestion de données,<br> gestion de serveur.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 80%"></div>
-                </div>
-            </div>
-
-        <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">HTML</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Sites internet pour des projets scolaires.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 75%"></div>
-                </div>
-            </div>
-
-                <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">CSS</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Stylisation de pages, animations<br> de pages.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 66%"></div>
-                </div>
-            </div>
-
-                <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">JavaScript</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Gestion des clients sur site internet, Bot Discord.js,<br> développement de jeux vidéo.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 40%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">java</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Implémentation front-end et back-end d'un logiciel (pour un projet).
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 75%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">SQL</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Gestion de bases de données, communication avec les bases de données.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 35%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">C++</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Utilisation de C++ pour des projets scolaires.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 30%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">VBA</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Utilisation du VBA lors de stage en entreprise lors de mon stage de 1ère année de BTS SIO.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 40%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">PHP</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Utilisation du PHP dans mon cursus scolaire.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 60%"></div>
-                </div>
-            </div>
-        
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">WordPress</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Création d'un site vitrine durant mes études, grace a l'aide de l'outil wordpress.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 50%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Arduino</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Création de feux de circulation, configuration d'une carte pour un projet, gestion de l’heure, gestion du matériel et du logiciel.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 25%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Angular</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Utilisation d'Angular pour créer des applications web dynamiques, lors de mon stage de 2ème année de BTS SIO.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 25%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">VSCODE</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Utilisation de vscode durant mes études, cette outils me permet de développer mes projets académique.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 25%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">IntelliJ_IDEA</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Je me sert de cette outils pour des projets academique mais aussi durant les différents stages que j'ai éffectué.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 25%"></div>
-                </div>
-            </div>
-
-            <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Github</h2>
-
-                <p class="text-slate-800 text-lg font-medium leading-tight mb-8">
-                Utilisation de github durant mes études, cette outils me permet de centraliser tous les projets que je réalise durant mes études.
-                </p>
-
-                <div class="w-full bg-gray-400 rounded-full h-3 max-w-[220px] overflow-hidden">
-                    <div class="bg-green-600 h-full rounded-full" style="width: 25%"></div>
-                </div>
-            </div>
-
+      <div class="w-full bg-gray-200 rounded-full h-3 max-w-[220px] overflow-hidden">
+        <div class="bg-green-600 h-full rounded-full transition-all duration-700" 
+             [style.width.%]="item.level">
         </div>
+      </div>
 
-    </main>
+    </div>
 
-    <footer class="w-full bg-[#5c5ce0] text-white text-center py-8 rounded-t-[3rem] mt-10">
-        <p class="text-lg font-medium tracking-wide">
-        &copy; 2026 Alexandre Gleizes.
-        </p>
-    </footer>
-
+  </div>
 </div>
