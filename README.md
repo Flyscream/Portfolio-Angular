@@ -69,4 +69,7 @@ npx angular-cli-ghpages --dir=dist/projet-portfolio/browser
 Architecture du Portfolio
 
 
+Pour faire  des modifications, sur la page flyscream, il faut effectuer les deux commandes pour mettre a jour la page. 
+
+
 
