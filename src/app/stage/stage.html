@@ -7,7 +7,7 @@
 
       <div class="relative">
         <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#5c5ce0]"></div>
-                <div *ngFor="let stage of StageList; let i = index" class="mb-8">
+          <div *ngFor="let stage of StageList; let i = index" class="mb-8">
           <div [ngClass]="i % 2 === 0 ? 'text-right pr-1/2 mr-1/2' : 'text-left pl-1/2 ml-1/2'">
             <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#5c5ce0] rounded-full border-4 border-[#f8faff]"></div>
 
