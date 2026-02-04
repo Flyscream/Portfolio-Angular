@@ -1,0 +1,42 @@
+[
+  { 
+    "name": "Projet agricole", 
+    "image": "photo/arduino.png", 
+    "description": "Durant ma dernière année de terminale, nous devions créer une robot agricole..." 
+  },
+  { 
+    "name": "IA pour Pac-Man", 
+    "image": "photo/Pac-man.jpg",
+    "description": "En groupe, en utilisant le language python..." 
+  },
+  { 
+    "name": "Application JO", 
+    "image": "photo/JO.jpg", 
+    "description": "Conception d'un logiciel pour organiser des Jeux Olympique..." 
+  },
+  { 
+    "name": "Cave a Fromage", 
+    "image": "photo/cave_a_fromage.jpg", 
+    "description": "Le but de ce petit projet consistait a faire en sorte de créer un site fixe..." 
+  },
+  { 
+    "name": "API Avion", 
+    "image": "photo/imageAvion.png", 
+    "description": "Création d'une application web en utilisant une API..." 
+  },
+  { 
+    "name": "Projet Clicker", 
+    "image": "photo/click.png", 
+    "description": "La création du jeu clicker, est un projet de fin d'année..." 
+  },
+  { 
+    "name": "Projet Stage Crédit Agricole", 
+    "image": "photo/Crédit_Agricole.svg", 
+    "description": "Lors de mon stage de premiére année réalisé dans le service informatique..." 
+  },
+  {
+    "name": "Projet Stage BNP Paribas",
+    "image": "photo/BNP_Paribas.png",
+    "description": "Lors de mon stage de deuxième année au sein du service informatique..."
+  }
+]
