@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core'; 
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router'; 
-
+import { HttpClient } from '@angular/common/http'; 
 @Component({
   selector: 'app-competences',
   standalone: true, 
@@ -9,22 +9,16 @@ import { RouterLink } from '@angular/router';
   templateUrl: './competences.html',
   styleUrl: './competences.css',
 })
-export class Competences {
-  competencesList = [
-    { title: 'Python', desc: 'IA Pacman, gestion de données, gestion de serveur.', level: 80, image: 'photo/imagespython.jpg' },
-    { title: 'HTML', desc: 'Sites internet pour des projets scolaires.', level: 75, image: 'photo/imageHTML.png' },
-    { title: 'CSS', desc: 'Stylisation de pages, animations de pages.', level: 66, image: 'photo/CSS.png' },
-    { title: 'JavaScript', desc: 'Gestion des clients, Bot Discord.js, jeux vidéo.', level: 40, image: 'photo/javascript.png' },
-    { title: 'Java', desc: "Implémentation front-end et back-end d'un logiciel.", level: 75, image: 'photo/java.png' },
-    { title: 'SQL', desc: 'Gestion et communication avec les bases de données.', level: 35, image: 'photo/sql.png' },
-    { title: 'C++', desc: 'Utilisation de C++ pour des projets scolaires.', level: 30, image: 'photo/c++.png' },
-    { title: 'VBA', desc: 'Stage de 1ère année BTS SIO.', level: 40, image: 'photo/vba.png' },
-    { title: 'PHP', desc: 'Utilisation du PHP dans mon cursus scolaire.', level: 60, image: 'photo/php.png' },
-    { title: 'WordPress', desc: "Création d'un site vitrine.", level: 50, image: 'photo/wordpress.png' },
-    { title: 'Arduino', desc: 'Feux de circulation, gestion matériel et logiciel.', level: 25, image: 'photo/arduino.png' },
-    { title: 'Angular', desc: 'Applications web dynamiques (Stage 2ème année).', level: 25, image: 'photo/Angular_logo.png' },
-    { title: 'VS Code', desc: 'Outil principal de développement.', level: 25, image: 'photo/vscode.png' },
-    { title: 'IntelliJ IDEA', desc: 'Projets académiques et stages.', level: 25, image: 'photo/IntelliJ_IDEA_Product_Icon.png' },
-    { title: 'GitHub', desc: 'Centralisation des projets.', level: 25, image: 'photo/github.png' }
-  ];
+export class Competences implements OnInit { 
+  competencesList = signal<any[]>([]);
+  private http = inject(HttpClient);
+
+  ngOnInit() {
+    this.http.get<any[]>('data/competences.json').subscribe({
+      next: (donnees) => {
+        this.competencesList.set(donnees);
+      },
+      error: (err) => console.error('Erreur de chargement :', err)
+    });
+  }
 }
