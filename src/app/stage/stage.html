@@ -12,7 +12,7 @@
             <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-[#5c5ce0] rounded-full border-4 border-[#f8faff]"></div>
 
             <div class="bg-white rounded-lg shadow-lg p-6 max-w-xs" [ngClass]="i % 2 === 0 ? 'mr-auto' : 'ml-auto'">
-              <img *ngIf="stage.image" [src]="stage.image" alt="{{stage.name}}" class="w-full h-auto object-contain rounded mb-4">
+              <img *ngIf="stage.image" [src]="stage.image" alt="{{stage.name}}" class="w-full w-32 h-32 mx-auto object-contain rounded mb-4">
               <h3 class="text-xl font-bold text-[#5c5ce0] mb-2 text-center">{{stage.name}}</h3>
               <p class="text-gray-600 text-sm text-center">{{stage.description}}</p>
             </div>
