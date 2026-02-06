@@ -1,51 +1,85 @@
 <div class="min-h-screen bg-[#f8faff] flex flex-col">
 
-  <main class="flex-grow flex flex-col items-center justify-start px-4">
-    <h1 class="text-5xl md:text-6xl font-extrabold text-[#5c5ce0] tracking-tight mb-16 text-center">
-      Portfolio Alexandre Gleizes
-    </h1>
+  <main class="flex-grow flex flex-col items-center justify-start px-4 py-12">
+    
+    <header class="text-center mb-16">
+      <h1 class="text-6xl md:text-7xl font-extrabold text-[#5c5ce0] tracking-tighter mb-4">
+        Alexandre Gleizes
+      </h1>
+      <p class="text-2xl text-slate-500 font-medium italic">Développeur Full-Stack & Étudiant </p>
+      
+    </header>
+
+    <div class="w-full max-w-4xl grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-50 text-center transition-transform hover:scale-105">
+        <p class="text-3xl font-bold text-[#5c5ce0]">2</p>
+        <p class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Ans d'études</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-50 text-center transition-transform hover:scale-105">
+        <p class="text-3xl font-bold text-[#5c5ce0]">8+</p>
+        <p class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Projets</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-50 text-center transition-transform hover:scale-105">
+        <p class="text-3xl font-bold text-[#5c5ce0]">2</p>
+        <p class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Stages</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-50 text-center transition-transform hover:scale-105">
+        <p class="text-3xl font-bold text-[#5c5ce0]">100%</p>
+        <p class="text-xs text-slate-400 uppercase tracking-widest font-semibold">Passion</p>
+      </div>
+    </div>
 
     <div class="w-full max-w-4xl space-y-12 mb-16">
       
-      <div class="bg-white p-10 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 text-center">
-        <h2 class="text-4xl font-bold text-[#5c5ce0] mb-6">À propos de moi</h2>
-        <p class="text-slate-600 leading-relaxed text-lg">
-          Je m'appelle <span class="font-semibold text-slate-800">Alexandre Gleizes</span>, j'ai 21 ans et je suis actuellement en 
-          <span class="font-semibold text-slate-800">2<sup>ème</sup> année de BTS SIO</span>. Dans le cadre de mes études, j'ai eu l'occasion 
-          de programmer de nombreux petits projets, notamment des sites vitrines et une application permettant de visualiser en direct les avions dans le monde. 
-          Avant d'intégrer ce cursus, j'ai effectué une année de BUT Informatique à Orléans, où j'ai également travaillé sur de nombreux projets en équipe.
-        </p>
+      <div class="bg-white p-10 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50">
+        <div class="flex flex-col items-center gap-8"> <div class="text-center w-full">
+                <h2 class="text-4xl font-bold text-[#5c5ce0] mb-6">À propos de moi</h2>
+                
+                <p class="text-slate-600 leading-relaxed text-lg max-w-2xl mx-auto">
+                    Je m'appelle <span class="font-semibold text-slate-800">Alexandre Gleizes</span>, j'ai 21 ans et je suis actuellement en 
+                    <span class="font-semibold text-slate-800">2<sup>ème</sup> année de BTS SIO</span>. Dans le cadre de mes études, j'ai eu l'occasion 
+                    de programmer de nombreux petits projets, notamment des sites vitrines et une application permettant de visualiser en direct les avions dans le monde. 
+                    Avant d'intégrer ce cursus, j'ai effectué une année de BUT Informatique à Orléans.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-2 mt-8">
+                    <span class="px-3 py-1 bg-indigo-50 text-[#5c5ce0] text-sm rounded-full font-medium italic">#Angular</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-[#5c5ce0] text-sm rounded-full font-medium italic">#Java</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-[#5c5ce0] text-sm rounded-full font-medium italic">#SQL</span>
+                </div>
+            </div>
+        </div>
       </div>
 
       <div class="bg-white p-10 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 text-center">
-        <h2 class="text-4xl font-bold text-[#5c5ce0] mb-10">Documents à télécharger</h2>
+        <h2 class="text-4xl font-bold text-[#5c5ce0] mb-10">Documents officiels</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <app-document-card 
-            title="Veille techno Alexandre.zip"   
+            title="Veille techno"   
             imageSrc="photo/veille-techno.png"
             fileUrl="doc/projet veille techno.zip">
           </app-document-card>
 
           <app-document-card 
-            title="Tableau Epreuve E4.csv" 
+            title="Epreuve E4" 
             imageSrc="photo/epreuve-E4.png"
             fileUrl="doc/Tableau de synthèse Épreuve E4.csv">
           </app-document-card>
 
           <app-document-card 
-            title="CV Alexandre GLEIZES" 
+            title="Mon CV" 
             imageSrc="photo/imageCV.png"
             fileUrl="doc/CV Alexandre GLEIZES 2025.pdf.pdf">
           </app-document-card>
 
         </div>
-
       </div>
 
     </div>  
-
   </main>
-    
 </div>
+
+
+
