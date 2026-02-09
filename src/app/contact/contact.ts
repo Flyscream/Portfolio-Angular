@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
+  standalone: true, 
   imports: [CommonModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
@@ -14,9 +15,10 @@ export class Contact {
   sujet = signal('');
   message = signal('');
 
-  envoieReussi = signal(false);
+ 
+  envoiReussi = signal(false);
 
-  envoyerFormulaire(){
+  envoyerFormulaire() {
     const nouveauMessage = {
       ID: Date.now(), 
       nom: this.nom(),
@@ -24,7 +26,7 @@ export class Contact {
       email: this.email(),
       sujet: this.sujet(),
       message: this.message(),
-      date: new Date().toISOString(),
+      date: new Date().toLocaleString(), 
     };
 
     const save = localStorage.getItem('messages');
@@ -32,15 +34,15 @@ export class Contact {
     messages.push(nouveauMessage);
     localStorage.setItem('messages', JSON.stringify(messages));
 
-    this.envoieReussi.set(true);
+    this.envoiReussi.set(true);
     this.nom.set('');
+    this.prenom.set('');
     this.email.set('');
     this.sujet.set('');
     this.message.set('');
 
-    setTimeout(() => this.envoieReussi.set(false), 5000);
+    setTimeout(() => this.envoiReussi.set(false), 5000);
     
     console.log('Fichier JSON mis à jour dans le LocalStorage !', messages);
   }
 }
-  
