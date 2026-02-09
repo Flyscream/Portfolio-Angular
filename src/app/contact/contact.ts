@@ -32,15 +32,15 @@ export class Contact {
     messages.push(nouveauMessage);
     localStorage.setItem('messages', JSON.stringify(messages));
 
-    /*this.envoiReussi.set(true);
+    this.envoieReussi.set(true);
     this.nom.set('');
     this.email.set('');
     this.sujet.set('');
     this.message.set('');
 
-    setTimeout(() => this.envoiReussi.set(false), 5000);
+    setTimeout(() => this.envoieReussi.set(false), 5000);
     
-    console.log('Fichier JSON mis à jour dans le LocalStorage !', messages);*/
+    console.log('Fichier JSON mis à jour dans le LocalStorage !', messages);
   }
 }
   
