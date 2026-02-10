@@ -58,7 +58,7 @@
     {   "title": "Angular", 
         "desc": "Applications web dynamiques (Stage 2ème année).", 
         "level": 25, 
-        "image": "photo/arduino.png"
+        "image": "photo/Angular_logo.png"
     },
     {   "title": "VS Code", 
         "desc": "Outil principal de développement.", 
