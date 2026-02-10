@@ -4,6 +4,7 @@ import { Competences } from './competences/competences';
 import { Projets } from './projets/projets';
 import { Stage } from './stage/stage';
 import { Contact } from './contact/contact';
+import { Admin } from './admin/admin';
 
 export const routes: Routes = [
   { path: 'home', component: Home },
@@ -11,6 +12,7 @@ export const routes: Routes = [
   { path: 'projets', component: Projets },
   { path: 'stage', component: Stage },
   { path: 'contact', component: Contact },
+  { path: 'admin', component: Admin },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
   
 ];

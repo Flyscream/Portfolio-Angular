@@ -1,1 +1,45 @@
-<p>admin works!</p>
+<div class="min-h-screen bg-[#f8faff] py-16 px-4">
+  <div class="max-w-5xl mx-auto">
+    
+    <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+      <h1 class="text-4xl font-extrabold text-[#5c5ce0]">Dashboard Admin</h1>
+      <button (click)="exporterEnJSON()" 
+              class="bg-green-600 text-white px-8 py-3 rounded-2xl font-bold hover:bg-green-700 transition-all shadow-lg shadow-green-100 flex items-center gap-2">
+        Exporter en JSON
+      </button>
+    </div>
+
+    <div class="grid gap-6">
+      <div *ngFor="let t of tickets()" 
+           class="bg-white p-6 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 flex flex-col gap-4 transition-all hover:border-indigo-200">
+        
+        <div class="flex justify-between items-start">
+          <div>
+            <span class="text-xs font-bold text-[#5c5ce0] bg-indigo-50 px-3 py-1 rounded-full uppercase tracking-wider">
+              Ticket #{{ t.ID }}
+            </span>
+            <h2 class="text-xl font-bold text-slate-800 mt-2">{{ t.sujet }}</h2>
+          </div>
+          <button (click)="supprimerTicket(t.ID)" class="text-red-400 hover:text-red-600 p-2 transition-colors">
+            Supprimer
+          </button>
+        </div>
+
+        <div class="flex flex-wrap gap-4 text-sm text-slate-500 border-b border-slate-50 pb-4">
+          <p> <span class="font-semibold text-slate-700">{{ t.prenom }} {{ t.nom }}</span></p>
+          <p> {{ t.email }}</p>
+          <p> {{ t.date }}</p>
+        </div>
+
+        <div class="bg-slate-50 p-5 rounded-2xl text-slate-600 italic leading-relaxed">
+          "{{ t.message }}"
+        </div>
+      </div>
+
+      <div *ngIf="tickets().length === 0" class="text-center py-20 bg-white rounded-3xl border-2 border-dashed border-slate-200 text-slate-400">
+        Aucun message reçu pour le moment.
+      </div>
+    </div>
+
+  </div>
+</div>

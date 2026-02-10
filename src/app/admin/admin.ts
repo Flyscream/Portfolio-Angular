@@ -28,7 +28,7 @@ export class Admin {
     this.tickets.set(MiseAJour);
   }
 
-  exporterENJSON() {
+  exporterEnJSON() {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.tickets()));
     const downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
