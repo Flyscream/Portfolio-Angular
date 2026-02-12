@@ -1,18 +1,21 @@
-<div class="min-h-screen bg-[#f8faff] py-20 px-4 flex flex-col items-center">
+<div class="min-h-screen bg-[#f8faff] py-20 px-4 flex flex-col items-center overflow-hidden">
   <div class="max-w-4xl w-full">
     
-    <h1 class="text-4xl md:text-5xl font-extrabold text-[#5c5ce0] text-center mb-6">
-      Restons connectés
-    </h1>
-    <p class="text-slate-600 text-center text-lg mb-16 leading-relaxed">
-      À la recherche de nouvelles opportunités ou d'une collaboration ? <br class="hidden md:block">
-      Retrouvez-moi sur mes différentes plateformes professionnelles.
-    </p>
+    <div class="animate-fade-in-up">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[#5c5ce0] text-center mb-6">
+        Restons connectés
+      </h1>
+      <p class="text-slate-600 text-center text-lg mb-16 leading-relaxed">
+        À la recherche de nouvelles opportunités ou d'une collaboration ? <br class="hidden md:block">
+        Retrouvez-moi sur mes différentes plateformes professionnelles.
+      </p>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 
-      <a href="mailto:ton.email@example.com" class="group bg-white p-8 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-indigo-200">
-        <div class="bg-indigo-100 p-4 rounded-2xl mb-6 group-hover:bg-[#5c5ce0] transition-colors duration-300">
+      <a href="mailto:ton.email@example.com" 
+         class="animate-fade-in-up delay-100 group bg-white p-8 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 flex flex-col items-center text-center transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-indigo-200">
+        <div class="bg-indigo-100 p-4 rounded-2xl mb-6 group-hover:bg-[#5c5ce0] group-hover:rotate-6 transition-all duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-[#5c5ce0] group-hover:text-white transition-colors duration-300">
             <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
             <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
@@ -20,22 +23,24 @@
         </div>
         <h3 class="text-xl font-bold text-slate-800 mb-2">Par Email</h3>
         <p class="text-slate-600 mb-6 text-sm">Pour des échanges directs.</p>
-        <span class="text-[#5c5ce0] font-semibold group-hover:underline">Écrire →</span>
+        <span class="text-[#5c5ce0] font-semibold group-hover:translate-x-2 transition-transform duration-300">Écrire →</span>
       </a>
 
-      <a href="https://www.linkedin.com/in/alexandre-gleizes-a2aa3b2b8/" target="_blank" class="group bg-white p-8 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-indigo-200">
-        <div class="bg-blue-100 p-4 rounded-2xl mb-6 group-hover:bg-[#0077b5] transition-colors duration-300">
+      <a href="https://www.linkedin.com/in/alexandre-gleizes-a2aa3b2b8/" target="_blank" 
+         class="animate-fade-in-up delay-200 group bg-white p-8 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 flex flex-col items-center text-center transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-indigo-200">
+        <div class="bg-blue-100 p-4 rounded-2xl mb-6 group-hover:bg-[#0077b5] group-hover:-rotate-6 transition-all duration-300">
           <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-[#0077b5] group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
           </svg>
         </div>
         <h3 class="text-xl font-bold text-slate-800 mb-2">LinkedIn</h3>
         <p class="text-slate-600 mb-6 text-sm">Mon réseau pro.</p>
-        <span class="text-[#0077b5] font-semibold group-hover:underline">Voir le profil →</span>
+        <span class="text-[#0077b5] font-semibold group-hover:translate-x-2 transition-transform duration-300">Voir le profil →</span>
       </a>
 
-      <a href="https://github.com/Flyscream" target="_blank" class="group bg-white p-8 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-indigo-200">
-        <div class="bg-slate-100 p-4 rounded-2xl mb-6 group-hover:bg-[#333] transition-colors duration-300">
+      <a href="https://github.com/Flyscream" target="_blank" 
+         class="animate-fade-in-up delay-300 group bg-white p-8 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 flex flex-col items-center text-center transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-indigo-200">
+        <div class="bg-slate-100 p-4 rounded-2xl mb-6 group-hover:bg-[#333] group-hover:scale-110 transition-all duration-300">
           <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-[#333] group-hover:text-white transition-colors duration-300" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
           </svg>
@@ -44,62 +49,62 @@
         <p class="text-slate-600 mb-6 text-sm">Mes sources.</p>
         <span class="text-[#333] font-semibold group-hover:underline">Explorer →</span>
       </a>
-
     </div>
 
-    <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50">
+    <div class="animate-fade-in-up delay-500 bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 transform transition-all hover:shadow-2xl duration-500">
       <h2 class="text-3xl font-bold text-[#5c5ce0] mb-8 text-center md:text-left">M'envoyer un message</h2>
 
       <form (submit)="$event.preventDefault(); envoyerFormulaire()" class="space-y-6">
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="flex flex-col space-y-2">
-            <label class="text-sm font-semibold text-slate-400 ml-1">Nom complet</label>
+          <div class="flex flex-col space-y-2 group">
+            <label class="text-sm font-semibold text-slate-400 ml-1 group-focus-within:text-[#5c5ce0] transition-colors">Nom complet</label>
             <input [value]="nom()" (input)="nom.set($any($event.target).value)" 
                    type="text" placeholder="Votre nom" required
-                   class="p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-[#5c5ce0] outline-none transition-all">
+                   class="p-4 bg-slate-50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#5c5ce0] focus:ring-4 focus:ring-indigo-50 outline-none transition-all">
           </div>
 
-            <div class="flex flex-col space-y-2">
-            <label class="text-sm font-semibold text-slate-400 ml-1">Prénom</label>
+          <div class="flex flex-col space-y-2 group">
+            <label class="text-sm font-semibold text-slate-400 ml-1 group-focus-within:text-[#5c5ce0] transition-colors">Prénom</label>
             <input [value]="prenom()" (input)="prenom.set($any($event.target).value)" 
                    type="text" placeholder="Votre prénom" required
-                   class="p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-[#5c5ce0] outline-none transition-all">
-          </div>
-
-          <div class="flex flex-col space-y-2">
-            <label class="text-sm font-semibold text-slate-400 ml-1">Votre Email</label>
-            <input [value]="email()" (input)="email.set($any($event.target).value)" 
-                   type="email" placeholder="votre@email.com" required
-                   class="p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-[#5c5ce0] outline-none transition-all">
+                   class="p-4 bg-slate-50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#5c5ce0] focus:ring-4 focus:ring-indigo-50 outline-none transition-all">
           </div>
         </div>
 
-        <div class="flex flex-col space-y-2">
-          <label class="text-sm font-semibold text-slate-400 ml-1">Sujet</label>
+        <div class="flex flex-col space-y-2 group">
+          <label class="text-sm font-semibold text-slate-400 ml-1 group-focus-within:text-[#5c5ce0] transition-colors">Votre Email</label>
+          <input [value]="email()" (input)="email.set($any($event.target).value)" 
+                 type="email" placeholder="votre@email.com" required
+                 class="p-4 bg-slate-50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#5c5ce0] focus:ring-4 focus:ring-indigo-50 outline-none transition-all">
+        </div>
+
+        <div class="flex flex-col space-y-2 group">
+          <label class="text-sm font-semibold text-slate-400 ml-1 group-focus-within:text-[#5c5ce0] transition-colors">Sujet</label>
           <input [value]="sujet()" (input)="sujet.set($any($event.target).value)" 
                  type="text" placeholder="Objet de votre message" required
-                 class="p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-[#5c5ce0] outline-none transition-all">
+                 class="p-4 bg-slate-50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#5c5ce0] focus:ring-4 focus:ring-indigo-50 outline-none transition-all">
         </div>
 
-        <div class="flex flex-col space-y-2">
-          <label class="text-sm font-semibold text-slate-400 ml-1">Message</label>
+        <div class="flex flex-col space-y-2 group">
+          <label class="text-sm font-semibold text-slate-400 ml-1 group-focus-within:text-[#5c5ce0] transition-colors">Message</label>
           <textarea [value]="message()" (input)="message.set($any($event.target).value)" 
                     rows="5" placeholder="Décrivez votre projet ou question..." required
-                    class="p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-[#5c5ce0] outline-none transition-all resize-none"></textarea>
+                    class="p-4 bg-slate-50 border-2 border-transparent rounded-2xl focus:bg-white focus:border-[#5c5ce0] focus:ring-4 focus:ring-indigo-50 outline-none transition-all resize-none"></textarea>
         </div>
 
         <div class="flex flex-col items-center md:items-start">
           <button type="submit" 
-                  class="px-12 py-4 bg-[#5c5ce0] text-white font-bold rounded-2xl shadow-lg shadow-indigo-100 hover:bg-[#4a4abf] hover:-translate-y-1 transition-all">
-            Envoyer le message
+                  class="group relative overflow-hidden px-12 py-4 bg-[#5c5ce0] text-white font-bold rounded-2xl shadow-lg shadow-indigo-100 hover:bg-[#4a4abf] hover:-translate-y-1 active:scale-95 transition-all duration-300">
+            <span class="relative z-10">Envoyer le message</span>
+            <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
           </button>
 
-          <div *ngIf="envoiReussi()" class="mt-4 text-green-600 font-medium flex items-center gap-2 animate-pulse">
+          <div *ngIf="envoiReussi()" class="mt-4 text-green-600 font-medium flex items-center gap-2 animate-bounce">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            Message enregistré avec succès dans le LocalStorage !
+            Message enregistré avec succès !
           </div>
         </div>
       </form>
@@ -107,8 +112,3 @@
 
   </div>
 </div>
-
-<!-- 
-  Pour aller voir le données dans le LocalStorage, allez dans les outils de développement de votre navigateur (F12),
-  puis dans l'onglet "Application", et sélectionnez "Storage Local" pour voir les messages enregistrés. 
--->
