@@ -1,29 +1,37 @@
-<div class="flex flex-col items-center justify-start py-12 px-4">
+<div class="flex flex-col items-center justify-start py-12 px-4 overflow-hidden">
   
-  <h1 class="text-5xl md:text-6xl font-extrabold text-[#5c5ce0] tracking-tight mb-16 text-center">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-[#5c5ce0] tracking-tight mb-16 text-center animate-fade-in-up">
     Compétences
   </h1>
 
   <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-20">
     
-    <div *ngFor="let item of competencesList()" 
-         class="bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-[#5c5ce0] flex flex-col items-center text-center transition-transform hover:scale-105">
+    <div *ngFor="let item of competencesList(); let i = index" 
+         class="animate-fade-in-up bg-white p-8 rounded-3xl shadow-2xl shadow-indigo-100/50 border-2 border-transparent hover:border-[#5c5ce0] flex flex-col items-center text-center transition-all duration-500 hover:scale-105 group hover-float">
       
-      <div class="w-24 h-24 mb-6 flex items-center justify-center">
+      <div class="w-24 h-24 mb-6 flex items-center justify-center bg-slate-50 rounded-2xl p-2 transition-transform duration-500 group-hover:scale-110">
           <img [src]="item.image" 
-              [alt]="item.title" 
-              class="max-w-full max-h-full object-contain">
+               [alt]="item.title" 
+               class="max-w-full max-h-full object-contain">
       </div>
 
-      <h2 class="text-3xl font-bold text-slate-900 mb-4">{{ item.title }}</h2>
+      <h2 class="text-3xl font-bold text-slate-900 mb-4 transition-colors group-hover:text-[#5c5ce0]">
+        {{ item.title }}
+      </h2>
 
-      <p class="text-slate-800 text-lg font-medium leading-tight mb-8 ">
+      <p class="text-slate-600 text-lg font-medium leading-tight mb-8">
         {{ item.desc }}
       </p>
 
-      <div class="w-full bg-gray-200 rounded-full h-3 max-w-[220px] overflow-hidden">
-        <div class="bg-green-600 h-full rounded-full transition-all duration-700" 
-             [style.width.%]="item.level">
+      <div class="w-full space-y-2">
+        <div class="flex justify-between text-xs font-bold text-slate-400 uppercase tracking-widest">
+            <span>Niveau</span>
+            <span>{{ item.level }}%</span>
+        </div>
+        <div class="w-full bg-gray-100 rounded-full h-3 max-w-[220px] mx-auto overflow-hidden">
+          <div class="bg-[#5c5ce0] h-full rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(92,92,224,0.3)]" 
+               [style.width.%]="item.level">
+          </div>
         </div>
       </div>
 
