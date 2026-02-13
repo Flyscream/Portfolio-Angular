@@ -23,7 +23,7 @@ export class Admin {
   }
 
   supprimerTicket(id: number) {
-    const MiseAJour = this.tickets().filter((ticket) => ticket.id !== id);
+    const MiseAJour = this.tickets().filter((ticket) => ticket.ID !== id);
     localStorage.setItem('messages', JSON.stringify(MiseAJour));
     this.tickets.set(MiseAJour);
   }
