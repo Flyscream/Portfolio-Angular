@@ -10,7 +10,7 @@
     </div>
 
     <div class="grid gap-6">
-      <div *ngFor="let t of tickets()" 
+      <div *ngFor="let t of store.items()" 
            class="bg-white p-6 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-50 flex flex-col gap-4 transition-all hover:border-indigo-200">
         
         <div class="flex justify-between items-start">
@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <div *ngIf="tickets().length === 0" class="text-center py-20 bg-white rounded-3xl border-2 border-dashed border-slate-200 text-slate-400">
+      <div *ngIf="store.items().length === 0" class="text-center py-20 bg-white rounded-3xl border-2 border-dashed border-slate-200 text-slate-400">
         Aucun message reçu pour le moment.
       </div>
     </div>
