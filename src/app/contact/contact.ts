@@ -1,6 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core'; 
 import { CommonModule } from '@angular/common';
-
+import { MessagesStore } from '../messages.store'; 
 @Component({
   selector: 'app-contact',
   standalone: true, 
@@ -9,13 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.css',
 })
 export class Contact {
+  readonly store = inject(MessagesStore);
+
   nom = signal('');
   prenom = signal('');
   email = signal('');
   sujet = signal('');
   message = signal('');
-
- 
   envoiReussi = signal(false);
 
   envoyerFormulaire() {
@@ -29,20 +29,18 @@ export class Contact {
       date: new Date().toLocaleString(), 
     };
 
-    const save = localStorage.getItem('messages');
-    const messages = save ? JSON.parse(save) : [];
-    messages.push(nouveauMessage);
-    localStorage.setItem('messages', JSON.stringify(messages));
+    this.store.addMessage(nouveauMessage);
 
     this.envoiReussi.set(true);
+    this.resetForm();
+    setTimeout(() => this.envoiReussi.set(false), 5000);
+  }
+
+  private resetForm() {
     this.nom.set('');
     this.prenom.set('');
     this.email.set('');
     this.sujet.set('');
     this.message.set('');
-
-    setTimeout(() => this.envoiReussi.set(false), 5000);
-    
-    console.log('Fichier JSON mis à jour dans le LocalStorage !', messages);
   }
 }
