@@ -1,5 +1,6 @@
-import { Component, signal, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MessagesStore } from '../messages.store';
 
 @Component({
   selector: 'app-admin',
@@ -9,27 +10,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './admin.css',
 })
 export class Admin {
-  tickets = signal<any[]>([]);
-
-  ngOnInit() {
-    this.chargerTickets();
-  }
-
-  chargerTickets() {
-    const save = localStorage.getItem('messages');
-    if (save) {
-      this.tickets.set(JSON.parse(save));
-    }
-  }
+  readonly store = inject(MessagesStore);
 
   supprimerTicket(id: number) {
-    const MiseAJour = this.tickets().filter((ticket) => ticket.ID !== id);
-    localStorage.setItem('messages', JSON.stringify(MiseAJour));
-    this.tickets.set(MiseAJour);
+    this.store.removeMessage(id);
   }
 
   exporterEnJSON() {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.tickets()));
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.store.items()));
     const downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
     downloadAnchorNode.setAttribute("download", "messages_portfolio.json");
